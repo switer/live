@@ -6,15 +6,9 @@ live demo
 http://www.xbc.me/tag/git-command/
 
 http://gitref.org/
-```
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-41737248-1', 'herokuapp.com');
-  ga('send', 'pageview');
-
-</script>
-```
+* BEM http://bem.info/method/filesystem/
+* Patterns For Large-Scale JavaScript Application Architecture http://addyosmani.com/largescalejavascript/
+* Atomic Design http://bradfrostweb.com/blog/post/atomic-web-design/
+* Comparison between different Observer Pattern implementations https://github.com/millermedeiros/js-signals/wiki/Comparison-between-different-Observer-Pattern-implementations
+* 前端开发项目 http://www.csdn.net/article/2013-06-25/2815979-front-end-development
