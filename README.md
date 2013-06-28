@@ -17,3 +17,8 @@ http://gitref.org/
 ### tools
 
 * 网站原型图 https://gomockingbird.com/
+
+
+### docs
+
+* IE Haslayout 详解 http://adamghost.com/2008/12/ie-haslayout-%E8%AF%A6%E8%A7%A3/
