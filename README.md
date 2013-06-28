@@ -22,3 +22,4 @@ http://gitref.org/
 ### docs
 
 * IE Haslayout 详解 http://adamghost.com/2008/12/ie-haslayout-%E8%AF%A6%E8%A7%A3/
+* 一个用户友好的UI设计 http://www.goodui.org
