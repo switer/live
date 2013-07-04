@@ -12,6 +12,7 @@ http://gitref.org/
 * Atomic Design http://bradfrostweb.com/blog/post/atomic-web-design/
 * Comparison between different Observer Pattern implementations https://github.com/millermedeiros/js-signals/wiki/Comparison-between-different-Observer-Pattern-implementations
 * 前端开发项目 http://www.csdn.net/article/2013-06-25/2815979-front-end-development
+* 《JavaScript Module Pattern: In-Depth》http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html
 
 
 ### tools
