@@ -14,6 +14,7 @@ http://gitref.org/
 * 前端开发项目 http://www.csdn.net/article/2013-06-25/2815979-front-end-development
 * 《JavaScript Module Pattern: In-Depth》http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html
 * building angularjs http://net.tutsplus.com/tutorials/javascript-ajax/building-a-web-app-from-scratch-in-angularjs/
+* builder http://net.tutsplus.com/tutorials/javascript-ajax/building-apps-with-the-yeoman-workflow/?utm_source=javascriptweekly&utm_medium=email
 
 
 ### tools
