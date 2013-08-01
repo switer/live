@@ -15,6 +15,8 @@ http://gitref.org/
 * 《JavaScript Module Pattern: In-Depth》http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html
 * building angularjs http://net.tutsplus.com/tutorials/javascript-ajax/building-a-web-app-from-scratch-in-angularjs/
 * builder http://net.tutsplus.com/tutorials/javascript-ajax/building-apps-with-the-yeoman-workflow/?utm_source=javascriptweekly&utm_medium=email
+* cujojs async tutorials http://know.cujojs.com/tutorials
+
 
 
 ### tools
