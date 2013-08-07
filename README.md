@@ -19,7 +19,7 @@ http://gitref.org/
 * node-cli-dev http://flippinawesome.org/2013/07/29/writing-a-command-line-utility-using-node/?utm_source=javascriptweekly&utm_medium=email
 * Taming JavascriptCore http://parmanoir.com/Taming_JavascriptCore_within_and_without_WebView
 * WebKit JavaScriptCore Ref http://developer.apple.com/library/mac/#documentation/Carbon/Reference/WebKit_JavaScriptCore_Ref/_index.html
-
+* CreativeLinkEffects http://tympanus.net/Development/CreativeLinkEffects/
 
 
 ### tools
