@@ -20,6 +20,7 @@ http://gitref.org/
 * Taming JavascriptCore http://parmanoir.com/Taming_JavascriptCore_within_and_without_WebView
 * WebKit JavaScriptCore Ref http://developer.apple.com/library/mac/#documentation/Carbon/Reference/WebKit_JavaScriptCore_Ref/_index.html
 * CreativeLinkEffects http://tympanus.net/Development/CreativeLinkEffects/
+* open-sourcing-libraries http://funwo.tk/2013-08-06-on-open-sourcing-libraries-cn.html#note-1
 
 
 ### tools
