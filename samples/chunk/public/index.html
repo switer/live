@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+var xhr = new XMLHttpRequest();
+xhr.open('GET', '/chunk');
+
+xhr.onreadystatechange = function () {
+    if (xhr.readyState > 2) {
+        console.log(xhr.response);
+    }
+}
+
+xhr.send();
+</script>
+</body>
+</html>
