@@ -34,6 +34,7 @@ http.createServer(function (req, res) {
     if (/^\/public\/.*/.exec(req.url)) {
 
         sendfile(req, res, path.resolve(process.cwd(), '.'));
+
     } else if (/^\/chunk/.exec(req.url)) {
         
         res.setHeader('Content-Type', 'text/html; charset=UTF-8');
@@ -43,13 +44,13 @@ http.createServer(function (req, res) {
             count = 0;
 
         res.write('<html><title>bigpipe</title><body>');
-
-        chunkes.push('<h1>hello world</h1>');
-        chunkes.push('<h2>hello world</h2>');
-        chunkes.push('<h3>hello world</h3>');
-        chunkes.push('<h4>hello world</h4>');
-        chunkes.push('<h5>hello world</h5>');
-        chunkes.push('<h6>hello world</h6>');
+ 
+        chunkes.push('<!--[chunk]--><h1>hello world</h1>');
+        chunkes.push('<!--[chunk]--><h2>hello world</h2>');
+        chunkes.push('<!--[chunk]--><h3>hello world</h3>');
+        chunkes.push('<!--[chunk]--><h4>hello world</h4>');
+        chunkes.push('<!--[chunk]--><h5>hello world</h5>');
+        chunkes.push('<!--[chunk]--><h6>hello world</h6>');
         chunkes.push('</body></html>');
         
         chunkes.forEach(function (item) {
