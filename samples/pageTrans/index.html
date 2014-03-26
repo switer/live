@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="format-detection" content="telephone=no">
+	<title>page transition</title>
+	<style type="text/css">
+		body {margin: 0;}
+		.page {height: auto;width: auto;-webkit-transition:-webkit-transform 0.5s;position: absolute;overflow: hidden;top:100px;}
+		.page1 {
+			background-color: cornflowerblue;
+		}
+		.page2 {
+			background-color: yellowgreen;
+		}
+		.show {-webkit-transform:translate(0);}
+		.hide {-webkit-transform:translate(100%);}
+		.middle {-webkit-transform:translate(-100%)}
+		.disable {}
+		.enable {}
+		.ms-none {display: none;}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+	<button id="next">next</button>
+<div class='page1 page enable show' id="con1">
+	<h1>AAAAAAAAAAAAAAAAA</h1>
+	<h1>AAAAAAAAAAAAAAAAA</h1>
+	<h1>AAAAAAAAAAAAAAAAA</h1>
+	<h1>AAAAAAAAAAAAAAAAA</h1>
+</div>
+<div class="page2 page ms-none disable hide" id='con2'>
+	<h1>BBBBBBBBBBBBBBBBB</h1>
+	<h1>BBBBBBBBBBBBBBBBB</h1>
+	<h1>BBBBBBBBBBBBBBBBB</h1>
+	<h1>BBBBBBBBBBBBBBBBB</h1>
+</div>
+
+<script type="text/javascript">
+	var page1 = document.getElementById('con1'),
+		page2 = document.getElementById('con2'),
+		next = document.getElementById('next'),
+		container = document.getElementById('container'),
+		tseCount = 0,
+		hashIndex = 0;
+
+	function transitionEndHandle (tar) {
+		var $tar = $(tar),
+			enable = $('.page.enable'),
+			disable = $('.page.disable'),
+			isTransition = false;
+			
+
+		tseCount ++;
+		if ($tar.hasClass('enable')) {
+			$(tar).addClass('ms-none').addClass('hide').removeClass('middle');
+			// $('.page.disable').removeClass('ms-none');
+			// setTimeout(function () {
+			// 	$('.page.disable').removeClass('hide').addClass('show');
+			// },0)
+		} else if ($tar.hasClass('disable')) {
+			// $('.page.enable').addClass('disable').removeClass('enable')
+			// $(tar).addClass('enable').removeClass('disable');
+		}
+		if (tseCount >= 2) {
+			enable.removeClass('enable').addClass('disable');
+			disable.removeClass('disable').addClass('enable');
+			tseCount = 0;
+			isTransition = false;
+		}
+	}
+	function doTransition () {
+		$('.page.disable').removeClass('ms-none');
+		setTimeout(function () {
+			$('.page.enable').removeClass('show').addClass('middle');
+			$('.page.disable').removeClass('hide').addClass('show');
+		},0)
+	}
+	next.addEventListener('click', doTransition);
+	window.addEventListener('hashchange', doTransition);
+
+	page1.addEventListener('webkitTransitionEnd', function () {
+		transitionEndHandle(page1)
+	})
+
+	page2.addEventListener('webkitTransitionEnd', function () {
+		transitionEndHandle(page2)
+	})
+
+	window.setInterval(function () {
+		window.location.hash = 'hash' + hashIndex;
+		hashIndex ++;
+	}, 1000)
+</script>
+</body>
+</html>
