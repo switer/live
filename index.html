@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>BIGBANG数字礼包</title>
+    <meta name="keywords" content="腾讯视频,电影,电视剧,综艺,新闻,财经,音乐,MV,高清,视频,在线观看">
+    <meta name="description" content="腾讯视频致力于打造中国最大的在线视频媒体平台，以丰富的内容、极致的观看体验、便捷的登录方式、24小时多平台无缝应用体验以及快捷分享的产品特性，主要满足用户在线观看视频的需求。">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="http://imgcache.gtimg.cn/tencentvideo_v1/vstyle/mobile/topic/style/bigbang/bigbang.css">
+    <style>
+    [r-show] {
+        display: 'none'
+    }
+    
+    #app {
+        height: 100%;
+        width: 100%
+    }
+    
+    .swipe {
+        overflow: hidden;
+        visibility: hidden;
+        position: relative;
+    }
+    
+    .swipe-wrap {
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .swipe-wrap > div {
+        float: left;
+        width: 100%;
+        position: relative;
+    }
+    /** {-webkit-touch-callout:none;}*/
+    </style>
+    <script>
+    alert('Step1')
+    window.APP_ENV = "production";
+    try {
+        document.domain = "qq.com"
+    } catch (e) {
+        console.log(e)
+    }
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="mod_payloading" style="display: none"><span class="ele_skull">正在加载中...</span>
+            <div class="mod_process_bar"><span class="process_wrap"><i class="inner" style="width: 0px" data-max="90"></i></span></div>
+        </div>
+        <div r-component="c-sharetip" r-ref="sharetip" r-replace="true"></div>
+    </div>
+    <script>
+    alert('Step2')
+    ! function() {
+        var n, t = document.querySelector("#app .mod_payloading"),
+            i = t.querySelector(".inner"),
+            e = 500;
+        window.Progress = {
+            pending: 0,
+            start: function() {
+                function n() {
+                    o.pending && (t += Math.round(5 * Math.random() || 1), t >= 100 ? (t = 100, o.pending = 0) : (o.pending = new Date - e || 1, setTimeout(function() {
+                        n()
+                    }, 120)), i.style.width = Math.round(.9 * t) + "px")
+                }
+                if (!this.pending) {
+                    this.pending = 1;
+                    var t = 0,
+                        e = +new Date,
+                        o = this;
+                    n(), o.show()
+                }
+            },
+            hide: function() {
+                function o() {
+                    i.style.width = "90px", setTimeout(function() {
+                        d.pending = 0, clearTimeout(n), t.style.display = "none"
+                    }, 150)
+                }
+                var d = this;
+                this.pending && this.pending < e ? setTimeout(o, e - this.pending) : o()
+            },
+            show: function() {
+                t.style.display = ""
+            }
+        };
+        var o = location.pathname.match(/([^\/]+)\.html$/);
+        o = o ? o[1] || "index" : "index", "index" == o && window.Progress.start()
+    }();
+    alert('Step4')
+    </script>
+    <script>
+    	alert('Step5')
+    </script>
+    <script src="http://imgcache.gtimg.cn/tencentvideo_v1/tvp/js/module/tvp.login.js"></script>
+    <script type="text/javascript" src="http://qzs.qq.com/tencentwap/script/bigbang/bigbang-gift-lib_f2ba2e.js"></script>
+    <script type="text/javascript" src="http://qzs.qq.com/tencentwap/script/bigbang/bigbang-gift_cbb24b.min.js"></script>
+    <script>
+    alert('Step6')
+    window.Zepto = window.Zepto || {}, Zepto.ajax = Zepto.ajax || $ajax;
+    </script>
+    <script>
+    if (window.InitializeApp) alert('Step7')
+    window.InitializeApp("index");
+	alert('done')
+    </script>
+</body>
+
+</html>
